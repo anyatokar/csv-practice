@@ -25,8 +25,8 @@ def get_all_gold_medalists(athlete_array_of_hashes)
   gold_medalist_array = Array.new
 
   athlete_array_of_hashes.each do |athlete_hash|
-    if athlete_hash["Medal"] != "Gold"
-      gold_medalist_array << athlete_hash["Name"]
+    if athlete_hash["Medal"] == "Gold"
+      gold_medalist_array << athlete_hash
     end
   end
   return gold_medalist_array
